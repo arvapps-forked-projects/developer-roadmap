@@ -41,7 +41,7 @@ export function RoadmapSearch(props: RoadmapSearchProps) {
   const randomTerms = ['OAuth', 'APIs', 'UX Design', 'gRPC'];
 
   return (
-    <div className="flex flex-grow flex-col items-center justify-center px-4 py-6 sm:px-6">
+    <div className="flex flex-grow flex-col items-center sm:justify-center px-4 py-6 sm:px-6">
       {isConfiguring && (
         <OpenAISettings
           onClose={() => {
@@ -130,7 +130,7 @@ export function RoadmapSearch(props: RoadmapSearchProps) {
         </div>
       </div>
       <div className="mt-12 flex flex-col items-center gap-4">
-        <p className="text-gray-500">
+        <p className="text-gray-500 text-center">
           You have generated{' '}
           <span
             className={cn(
@@ -145,7 +145,7 @@ export function RoadmapSearch(props: RoadmapSearchProps) {
           </span>{' '}
           roadmaps.
         </p>
-        <p className="flex min-h-[26px] items-center text-sm">
+        <p className="flex min-h-[46px] sm:min-h-[26px] items-center text-sm">
           {limit > 0 && !isLoggedIn() && (
             <button
               onClick={showLoginPopup}
@@ -159,7 +159,7 @@ export function RoadmapSearch(props: RoadmapSearchProps) {
             </button>
           )}
         </p>
-        <p className="-mt-[45px] flex min-h-[26px] items-center text-sm">
+        <p className="-mt-[75px] sm:-mt-[46px] flex min-h-[46px] sm:min-h-[26px] items-center text-sm">
           {limit > 0 && isLoggedIn() && !openAPIKey && (
             <button
               onClick={() => setIsConfiguring(true)}
